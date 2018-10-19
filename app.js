@@ -4,10 +4,7 @@ let app = new Vue({
 
     data: {
 
-        clockstuff: '00:00:00',
-        alarmstuff: '',
-        alarminput: '',
-        alarmstate: 'off'
+        clockstuff: '00:00:00'
 
     },
 
@@ -18,10 +15,7 @@ let app = new Vue({
 
         setInterval(function() {
             self.clockstuff = self.setTime();
-            self.checkAlarm();
-
         }, 1000);
-
 
     },
 
@@ -48,40 +42,7 @@ let app = new Vue({
 
             return hours + ':' + minutes + ':' + seconds;
 
-
-        },
-
-        checkAlarm: function () {
-          if (this.alarmstate=="off") {
-            if (this.clockstuff==this.alarmstuff) {
-              alarm.style.display= 'block';
-              this.alarmstate='on'
-
-          } else {
-            alarm.style.display= 'none';
-          }
         }
-
-         if (this.alarmstate=="on") {
-           alarm.style.displa= 'block';
-         }
-
-
-      },
-
-        alarmOff: function () {
-          this.alarmstate='off';
-          alarm.style.display='none';
-          console.log('this is working');
-
-        },
-
-        setAlarm: function () {
-          return this.alarmstuff;
-
-        }
-
-
 
 
     }

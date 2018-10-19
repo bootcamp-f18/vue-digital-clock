@@ -17,17 +17,7 @@
 
     <div id="app" class="pt-5" v-cloak>
 
-
-      <p>The current time is:</p>
-      <h2 class="text-info" id="clock">{{ clockstuff }}</h2>
-
-      <div id="input">
-        <input v-model="alarmstuff" v-on:key.enter="setAlarm"></input>
-      </div>
-      <div id="alarm">
-        <h2 class="text-danger">ALARM!</h2>
-        <button v-on:click="alarmOff" type="button">Okay!</button>
-      </div>
+        <h2 class="text-info" id="clock">{{ clockstuff }}</h2>
 
     </div>
 
